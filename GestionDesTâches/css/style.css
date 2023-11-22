@@ -93,6 +93,7 @@ body {
   display: grid;
   place-content: center;
 }
+
 #elevee::before {
   content: "";
   width: 0.65em;
@@ -102,9 +103,11 @@ body {
   transition: 120ms transform ease-in-out;
   box-shadow: inset 1em 1em orange;
 }
+
 #elevee:checked::before {
   transform: scale(1);
 }
+
 #faible {
   appearance: none;
   background-color: #fff;
