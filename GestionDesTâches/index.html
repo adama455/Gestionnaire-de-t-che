@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des tâches</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Inclure Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <h1 class="jumbotron shadow titre py-1 my-2 text-center">GESTIONNAIRE DE LISTE DES TACHES</h1>
+    <div class="container mt-2 row mx-auto">
+        <div class="col-5" id="blocForm">
+            <div class="card w-75 rounded rounded-2">
+                <div class="p-2">
+                    <div class="card border border-0">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4" style="font-weight: bold;">Vos Tâches</h5>
+                            <p class="card-text" style="color: orange;">CREER UNE TACHE A FAIRE. <br>
+                                <small class="text-body-secondary">Qu'y a-t-il sur votre todo ?</small>
+                            </p>
+                            <div class="my-2">
+                                <form id="taskForm">
+                                    <div class="mb-2">
+                                        <input type="hidden" id="taskId" value="">
+                                        <input type="text" id="taskTitle" placeholder="Titre de la tâche"
+                                            class="form-control" required>
+                                    </div>
+                                    <!--<div class="mb-2">
+                                            <textarea id="taskDescription" placeholder="Description de la tâche"
+                                                class="form-control"></textarea>
+                                        </div>
+                                        <div class="mb-2">
+                                            <input type="date" id="taskDate" class="form-control">
+                                        </div>-->
+
+                                    <label for="priorité" class="mt-2"><small>Choisissez une
+                                            priorité</small></label>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="card col-6 me-2 d-flex align-items-center">
+                                            <input type="radio" name="priorite" id="elevee" value="elevee" class="mt-3" >
+                                            <p class="text-center">Elevée</p>
+                                        </div>
+                                        <div class="card col-6 d-flex align-items-center">
+                                            <input type="radio" name="priorite" id="faible" value="faible" class="mt-3">
+                                            <p class="text-center">Faible</p>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="form-control btn border-0 text-white" id="ajoutTache" style="background-color: orange; font-weight: bold;">AJOUTER
+                                        UNE TACHE</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="col-7" id="">
+            <h5 class="jumbotron mt-2 mb-2" style="color: orange;">LISTE DES TACHES A FAIRE</h5>
+            <div id="blocListe">
+                <div class="card ms-5 mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-1">
+                                <span>
+                                    <i class="far fa-check-circle"></i> <!-- Icône "Terminé" -->
+                                </span>
+                            </div>
+                            <div class="col-9">
+                                <!--<h5 class="card-title">Tâche 1</h5>-->
+                                <p class="card-text">Description de la tâche.</p>
+                                <!--<p class="card-text">Date d'échéance : 20/12/2023</p>-->
+                            </div>
+                            <div class="col-2  d-flex justify-content-around align-items-end">
+                                <span>
+                                    <i class="far fa-trash-alt text-danger"></i> <!-- Icône "Supprimer" -->
+                                </span>
+                                <span>
+                                    <i class="far fa-trash-alt text-danger"></i> <!-- Icône "Supprimer" -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap2.bundale.min.js"></script>
+</body>
+
+</html>
